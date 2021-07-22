@@ -10,7 +10,7 @@
             <div class='col-md-5'>
                 <span id='locations'>
                     {% for location in locations %}
-                       <a class='btn btn-outline-info btn-sm' id='btn' href="/location">{{location.name}}</a>
+                       <a class='btn btn-outline-info btn-sm' id='btn' href="{% url 'location' location.id %}">{{location.name}}</a>
                     {% endfor %}
                 </span>
             </div>
@@ -39,7 +39,7 @@
                         <img src="{{image.image.url}}" alt="{{image.name}}" class="img-fluid">
                         <p class='text-center'>{{image.description}}</p>
                         <span class="btn btn-sm btn-outline-success">{{image.category}}</span>
-                        <a href="/location/{{image.location}}" class="btn btn-sm btn-outline-info">{{image.location}}</a>
+                        <span class="btn btn-sm btn-outline-info">{{image.location}}</span>
 
                       </div>
 
